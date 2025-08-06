@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abiskar Chhetri Portfolio</title>
+  <link rel="preload" href="fonts/Quicksand-Bold.woff2" as="font" type="font/woff2" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Page 1: About -->
+  <section class="page page-about" id="about">
+    <header>
+      <h1>Abiskar Chhetri</h1>
+      <p class="subtitle">Frontend Developer & Dreamer</p>
+    </header>
+    <div class="about-content">
+      <img src="images/mee.jpeg" alt="Abiskar Chhetri" class="about-photo" />
+      <div>
+        <h2>Hello There! 👋</h2>
+        <p>
+          I’m Abiskar – I love crafting colorful, accessible, and modern web experiences.
+          I believe in playful details, friendly tech, and learning every day. Welcome to my digital space!
+        </p>
+      </div>
+    </div>
+    <a href="#skills" class="scroll-down" id="scroll-arrow" aria-label="Scroll to skills section">
+      <span class="arrow">&#8595;</span>
+      <span class="scroll-more-text" id="more-text">more about me</span>
+    </a>
+  </section>
+
+  <!-- Page 2: Skills + Projects -->
+  <section class="page page-skills" id="skills">
+    <h2>Skills &amp; Projects</h2>
+    <ul class="skills-list">
+      <li>HTML5 &amp; CSS3</li>
+      <li>JavaScript</li>
+      <li>React</li>
+      <li>Responsive Design</li>
+      <li>Figma</li>
+      <li>Accessibility</li>
+    </ul>
+    <section class="projects-grid-section">
+      <h2 class="sr-only">Projects</h2>
+      <div class="project-gallery" role="list">
+        <article class="project-card large" style="background-color:#f0f3ff;" role="listitem">
+          <img src="images/p1.jpeg" alt="Palette Pop app on laptop" />
+          <div class="details">
+            <h3>personal Website</h3>
+            <p>A sweet website filled with html  .</p>
+          </div>
+        </article>
+        <article class="project-card small" style="background-color:#fff4f2;" role="listitem">
+          <img src="images/p2.jpeg" alt="Travel Tales on phone" />
+          <div class="details">
+            <h3>Travel Tales</h3>
+            <p>Photo blog &amp; stories from my trips with CSS gallery and lightbox.</p>
+          </div>
+        </article>
+        <article class="project-card small" style="background-color:#f4fffa;" role="listitem">
+          <img src="images/p3.jpeg" alt="Quizzy on tablet" />
+          <div class="details">
+            <h3>Number Guessing Game</h3>
+            <p>A quick, game make using arduino.</p>
+          </div>
+        </article>
+        <article class="project-card large" style="background-color:#e7f6fd;" role="listitem">
+          <img src="images/p4.jpeg" alt="Portfolio v2 on laptop" />
+          <div class="details">
+            <h3>Portfolio v2</h3>
+            <p>This very site! Custom CSS, transitions, and mobile-first layout.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <a href="#contact" class="scroll-down" aria-label="Scroll to contact section">&#8595;</a>
+  </section>
+
+  <!-- Page 3: Contact -->
+  <section class="page page-contact" id="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm" autocomplete="off">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" placeholder="Your message" required></textarea>
+
+      <button id="sendBtn" type="button" aria-label="Send message">Send</button>
+
+      <span id="car" aria-hidden="true" class="car">🚗</span>
+    </form>
+    <div class="social-links">
+      <a href="abiskarchhretri86@email.com" target="_blank" rel="noopener">Email</a>
+      <a href="https://github.com/abiskar-jj" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/abiskar-chhetri-400271342/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <a href="#about" class="scroll-top" aria-label="Back to top">&#8593;</a>
+    <footer>&copy; 2025 Abiskar Chhetri</footer>
+  </section>
+
+  <script>
+    // Car "drive out" animation on send button click
+    const btn = document.getElementById('sendBtn');
+    const car = document.getElementById('car');
+    btn.addEventListener('click', () => {
+      car.classList.add('drive');
+      setTimeout(() => car.classList.remove('drive'), 1100);
+    });
+  </script>
+</body>
+</html>
